@@ -12,7 +12,7 @@ function fullName(user) {
   // This function is pure
   return {
     ...user,
-    fullName: user.first_name + " " + user.last_name
+    fullName: (user.first_name + " " + user.last_name).trim()
   };
 }
 
@@ -33,4 +33,4 @@ async function selectUsersById(userId) {
   return res.rows.map(fullName)[0];
 }
 
-module.exports = { selectUsers, selectUsersById, client };
+module.exports = { selectUsers, selectUsersById, client, fullName };
