@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`user fetching should fetch a user with a given id 1`] = `
+Object {
+  "created_at": 2020-03-04T14:12:49.424Z,
+  "first_name": "Alice",
+  "fullName": "Alice Doe",
+  "id": 1,
+  "last_name": "Doe",
+  "updated_at": 2020-03-04T14:12:49.424Z,
+}
+`;
+
+exports[`user fetching should fetch all users in a database 1`] = `
+Array [
+  Object {
+    "created_at": 2020-03-04T14:12:49.424Z,
+    "first_name": "Alice",
+    "fullName": "Alice Doe",
+    "id": 1,
+    "last_name": "Doe",
+    "updated_at": 2020-03-04T14:12:49.424Z,
+  },
+  Object {
+    "created_at": 2020-03-04T14:12:49.424Z,
+    "first_name": "Bob",
+    "fullName": "Bob Smith",
+    "id": 2,
+    "last_name": "Smith",
+    "updated_at": 2020-03-04T14:12:49.424Z,
+  },
+]
+`;
