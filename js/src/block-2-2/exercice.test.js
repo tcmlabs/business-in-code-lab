@@ -1,4 +1,4 @@
-const UserService = require("./userService");
+const UserService = require("../userService");
 
 async function dropUsers() {
   await UserService.client.query("DELETE FROM users;");

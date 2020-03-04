@@ -1,4 +1,4 @@
-const UserService = require("./userService");
+const UserService = require("../userService");
 
 describe("user fetching", () => {
   it("should return a full name", () => {
