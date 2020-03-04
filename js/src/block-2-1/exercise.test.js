@@ -16,7 +16,7 @@ describe("user fetching", () => {
     expect(fullName).toBe(expected);
   });
 
-  it("should handle empty string", () => {
+  it("should handle empty lastname", () => {
     // 1. Preparation phase
     const user = {
       first_name: "Alice",
