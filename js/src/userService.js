@@ -16,11 +16,16 @@ function fullName(user) {
   };
 }
 
+async function selectUsersWithFullName() {
+  const users = await selectUsers();
+  return users.map(fullName);
+}
+
 async function selectUsers() {
   // This function is NOT pure
   const res = await client.query("SELECT * FROM users");
 
-  return res.rows.map(fullName);
+  return res.rows;
 }
 
 async function selectUsersById(userId) {
@@ -33,4 +38,10 @@ async function selectUsersById(userId) {
   return res.rows.map(fullName)[0];
 }
 
-module.exports = { selectUsers, selectUsersById, client, fullName };
+module.exports = {
+  selectUsers,
+  selectUsersById,
+  client,
+  fullName,
+  selectUsersWithFullName
+};
