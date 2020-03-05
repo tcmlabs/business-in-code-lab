@@ -26,12 +26,14 @@ describe("user fetching", () => {
     await prepareUsers();
   });
 
-  afterEach(async () => {
-    await dropUsers();
-  });
-
   it("should fetch all users in a database", async () => {
     const users = await UserService.selectUsers();
+
+    expect(users).toMatchSnapshot();
+  });
+
+  it("should fetch all users with full name in a database", async () => {
+    const users = await UserService.selectUsersWithFullName();
 
     expect(users).toMatchSnapshot();
   });
